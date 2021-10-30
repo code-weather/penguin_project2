@@ -6,14 +6,15 @@
     <a href="/user/logout"><button>Logout</button></a>
     {% for card in cards %}
         <article>
-        <p>{{ card }}</p>
-        <img src="{{ card.img }}" />
-        <a href="/cards/{{ card._id }}"> <!-- Use "_id" and NOT "index" -->
-            <h2>
-            {{card.name}}
-            </h2>
-        </a>
-</article>
+            <div>
+                <h2>
+                    <a href="/cards/{{ card._id }}">
+                    {{card.name}}
+                </h2>
+                <img src="{{ card.img }}" />
+                </a>
+            </div>
+        </article>
 {% endfor %}
 
 
