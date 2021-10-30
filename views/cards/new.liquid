@@ -1,0 +1,37 @@
+{% layout "layout.liquid" %}
+{% block content %}
+
+<div>
+
+<form action="/cards" method="post">
+    <fieldset>
+        <legend>Create a New Card</legend>
+            <label>
+                Name: <input type="text" name="name" placeholder="enter card name"/>
+            </label>
+            <label>
+                Category: <br>
+                <input type="checkbox" name="skill" value="monster"> Monster Card <br>
+                <input type="checkbox" name="skill" value="spell"> Spell Card <br>
+                <input type="checkbox" name="skill" value="trap"> Trap Card
+            </label>
+            <label>
+                Attribute: <input type="text" name="Attribute"/>
+            </label>
+            <label>
+                Monster Type: <input type="text" name="Monster type"/>
+            </label>
+            <label>
+                Card Type: <input type="text" name="Card type">
+            </label>
+            <label>
+                Card text:
+                <textarea cols="50" rows="4"></textarea>
+            </label>
+    </fieldset>
+    <input type="submit" value="create new card"/>
+</form>
+
+</div>
+
+{% endblock %}

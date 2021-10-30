@@ -1,0 +1,22 @@
+{% layout "layout.liquid" %}
+{% block content %}
+
+<div>
+    <a href="/cards/new"><button>Create a New Yugioh Card</button></a> <!-- Place button on top of loop -->
+    <a href="/user/logout"><button>Logout</button></a>
+    {% for card in cards %}
+        <article>
+        <p>{{ card }}</p>
+        <img src="{{ card.img }}" />
+        <a href="/cards/{{ card._id }}"> <!-- Use "_id" and NOT "index" -->
+            <h2>
+            {{card.name}}
+            </h2>
+        </a>
+</article>
+{% endfor %}
+
+
+</div>
+
+{% endblock %}

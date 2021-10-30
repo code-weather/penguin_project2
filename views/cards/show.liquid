@@ -1,0 +1,55 @@
+{% layout "layout.liquid" %}
+{% block content %}
+
+<article>
+
+    <div>
+        <h1>Yugioh Card Stats</h1>
+    </div>
+        <h2>{{ card.name }}</h2>
+        <img src="{{card.img}}" alt="Yugioh card">
+
+    <div>
+        <h2>
+            Stats
+            <h3>
+                <h2>
+                    Category:
+                    <h3>{{ card.category }}</h3>
+                </h2>    
+                Attribute: 
+                <h4>{{ card.attribute }}</h4>
+            </h3>
+
+            <h3>
+                Monster Type:
+                <h4>{{ card.monsterType }}</h4>
+            </h3>
+
+            <h3>
+                Card Type:
+                <h4>{{ card.cardType }}</h4>
+            </h3>
+            <h3>
+                Card Text:
+                <h4>{{card.cardText}}</h4>
+            </h3>
+            <h3>
+                Attack:
+                <h4>{{card.atk}}</h4>
+            </h3>
+            <h3>
+                Defense:
+                <h4>{{card.def}}</h4>
+            </h3>
+        </h2>
+    </div>
+
+    <a href="/cards/{{card._id}}/edit"><button>Edit {{card.name}}</button></a>
+    <form action="/cards/{{card._id}}?_method=DELETE" method=post>
+        <input type="submit" value="Delete" class="delete">
+    </form>
+
+</article>
+
+{% endblock %}
