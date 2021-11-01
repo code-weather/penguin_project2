@@ -39,6 +39,8 @@ Users will be able to look up any Yu-Gi-Oh card and have information of differen
 
 - Had trouble creating the routes to appear but was able to solve it by deleting "/cards" in the URL with the "route" variable
 
+- Had a challenge creating a modal
+
 ## List of Technologies
 
 - JavaScript
