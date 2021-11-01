@@ -53,3 +53,4 @@ Users will be able to look up any Yu-Gi-Oh card and have information of differen
 - Created and linked connection.js with ./models/yugioh.js
 - Completed the routes
 - Will be exporting all database into different folders.
+- Creating a sandwich menu

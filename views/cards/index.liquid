@@ -1,23 +1,44 @@
 {% layout "layout.liquid" %}
 {% block content %}
 
-<div>
-    <a href="/cards/new"><button>Create a New Yugioh Card</button></a> <!-- Place button on top of loop -->
-    <a href="/user/logout"><button>Logout</button></a>
+<style>
+    body {
+        background-color: #e2d7d79f;
+        background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp2001960.jpg&f=1&nofb=1");
+    }
+    .loop-div {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 10px;
+    }
+    article {
+        padding: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        text-align: center;
+        font-size: 30px;
+    }
+    .name {
+        color: rgb(221, 163, 255);
+        background-color: rgb(65, 62, 62);
+    }
+</style>
+
+<a href="/cards/new"><button>Create a New Yugioh Card</button></a> <!-- Place button on top of loop -->
+<a href="/user/logout"><button>Logout</button></a>
+
+<div class="loop-div">
     {% for card in cards %}
         <article>
-            <div>
-                <h2>
-                    <a href="/cards/{{ card._id }}">
+            <div class="pictures">
+                <h2 class="items">
+                    <a href="/cards/{{ card._id }}" class="name">
                     {{card.name}}
                 </h2>
-                <img src="{{ card.img }}" />
+                <img src="{{ card.img }}" class="items"/>
                 </a>
-            </div>
+            </div> 
         </article>
 {% endfor %}
-
-
 </div>
 
 {% endblock %}

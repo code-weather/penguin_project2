@@ -1,47 +1,61 @@
 {% layout "layout.liquid" %}
 {% block content %}
 
+<style>
+    body {
+        background-color: #afaaaa9f;
+    }
+    .stats-title {
+        text-decoration: underline;
+    }
+    .heading {
+        background: burlywood;
+        text-align: center;
+    }
+</style>
+
 <article>
 
     <div>
-        <h1>Yugioh Card Stats</h1>
+        <h1 class="heading">Yugioh Card Stats</h1>
     </div>
         <h2>{{ card.name }}</h2>
         <img src="{{card.img}}" alt="Yugioh card">
 
     <div>
         <h2>
-            Stats
+            <div class="stats-title">Stats</div>
             <h3>
                 <h2>
                     Category:
-                    <h3>{{ card.category }}</h3>
-                </h2>    
+                    <h4>{{ card.category }}</h4>
+                </h2>
+                <h2> 
                 Attribute: 
                 <h4>{{ card.attribute }}</h4>
+                </h2>   
             </h3>
 
-            <h3>
+            <h2>
                 Monster Type:
                 <h4>{{ card.monsterType }}</h4>
-            </h3>
-
-            <h3>
+            </h2>
+            <h2>
                 Card Type:
                 <h4>{{ card.cardType }}</h4>
-            </h3>
-            <h3>
+            </h2>
+            <h2>
                 Card Text:
                 <h4>{{card.cardText}}</h4>
-            </h3>
-            <h3>
+            </h2>
+            <h2>
                 Attack:
                 <h4>{{card.atk}}</h4>
-            </h3>
-            <h3>
+            </h2>
+            <h2>
                 Defense:
                 <h4>{{card.def}}</h4>
-            </h3>
+            </h2>
         </h2>
     </div>
 
